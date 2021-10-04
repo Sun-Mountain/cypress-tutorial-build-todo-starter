@@ -1,0 +1,20 @@
+[{
+    "id": 1,
+    "name": "Wake Up",
+    "isComplete": false
+  },
+  {
+    "id": 2,
+    "name": "Feed Cats",
+    "isComplete": false
+  },
+  {
+    "id": 3,
+    "name": "Eat Breakfast",
+    "isComplete": false
+  },
+  {
+    "id": 4,
+    "name": "Brush Teeth",
+    "isComplete": false
+}]
