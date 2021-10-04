@@ -39,6 +39,7 @@ export default class TodoApp extends Component {
             <h1>todos</h1>
             <TodoForm 
               currentTodo={this.state.currentTodo}
+              handleTodoSubmit={this.handleTodoSubmit}
               handleNewTodoChange={this.handleNewTodoChange} />
           </header>
           <section className="main">
