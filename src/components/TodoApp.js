@@ -51,7 +51,7 @@ export default class TodoApp extends Component {
         const todos = [
           ...this.state.todos.slice(0, targetIndex),
           data,
-          ...this.state.todos.slice(targetIndex)
+          ...this.state.todos.slice(targetIndex + 1)
         ]
         this.setState({todos: todos})
       })
