@@ -1,19 +1,24 @@
 {
   "todos": [
     {
-      "name": "Wake up",
-      "isComplete": false,
-      "id": 1
+      "id": 1,
+      "name": "Wake Up",
+      "isComplete": false
     },
     {
-      "name": "Feed cats",
-      "isComplete": false,
-      "id": 2
+      "id": 2,
+      "name": "Feed Cats",
+      "isComplete": false
     },
     {
-      "name": "Eat breakfast",
-      "isComplete": false,
-      "id": 3
+      "id": 3,
+      "name": "Eat Breakfast",
+      "isComplete": false
+    },
+    {
+      "id": 4,
+      "name": "Brush Teeth",
+      "isComplete": false
     }
   ]
 }
