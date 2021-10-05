@@ -64,22 +64,32 @@ describe('smoke tests', () => {
         .should('not.exist')
     })
 
-    it.only('toggles todos', () => {
+    it('toggles todos', () => {
+      const clickAndWait = ($el) => {
+        cy.wrap($el)
+          .as('item')
+          .find('.toggle')
+          .click()
+
+        cy.wait('@update')
+      }
+
       cy.server()
       cy.route('PUT', '/api/todos/*')
         .as('update')
 
       cy.get('.todo-list li')
         .each($el => {
-          cy.wrap($el)
-            .as('item')
-            .find('.toggle')
-            .click()
-
-          cy.wait('@update')
+          clickAndWait($el)
 
           cy.get('@item')
             .should('have.class', 'completed')
+        })
+        .each($el => {
+          clickAndWait($el)
+
+          cy.get('@item')
+            .should('not.have.class', 'completed')
         })
     })
   })

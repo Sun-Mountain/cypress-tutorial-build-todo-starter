@@ -3,22 +3,22 @@
     {
       "id": 1,
       "name": "Wake Up",
-      "isComplete": true
+      "isComplete": false
     },
     {
       "id": 2,
       "name": "Feed Cats",
-      "isComplete": true
+      "isComplete": false
     },
     {
       "id": 3,
       "name": "Eat Breakfast",
-      "isComplete": true
+      "isComplete": false
     },
     {
       "id": 4,
       "name": "Brush Teeth",
-      "isComplete": true
+      "isComplete": false
     }
   ]
 }
