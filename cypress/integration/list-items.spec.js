@@ -39,7 +39,7 @@ describe('List items', () => {
       .and('not.contain', 'Wake')
   })
 
-  it.only('marks an incomplete item complete', () => {
+  it('marks an incomplete item complete', () => {
     cy.fixture('todos')
       .then(todos => {
         const target = Cypress._.head(todos)
