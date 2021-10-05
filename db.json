@@ -4,6 +4,16 @@
       "name": "Wake up",
       "isComplete": false,
       "id": 1
+    },
+    {
+      "name": "Feed cats",
+      "isComplete": false,
+      "id": 2
+    },
+    {
+      "name": "Eat breakfast",
+      "isComplete": false,
+      "id": 3
     }
   ]
 }
