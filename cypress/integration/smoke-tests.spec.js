@@ -42,9 +42,45 @@ describe('smoke tests', () => {
       cy.visit('/')
     })
 
-    it.only('loads existing data from the db', () => {
+    it('loads existing data from the db', () => {
       cy.get('.todo-list li')
         .should('have.length', 4)
+    })
+
+    it('deletes todos', () => {
+      cy.server()
+      cy.route('DELETE', '/api/todos/*')
+        .as('delete')
+
+      cy.get('.todo-list li')
+        .each($el => {
+          cy.wrap($el)
+            .find('.destroy')
+            .invoke('show')
+            .click()
+
+          cy.wait('@delete')
+        })
+        .should('not.exist')
+    })
+
+    it.only('toggles todos', () => {
+      cy.server()
+      cy.route('PUT', '/api/todos/*')
+        .as('update')
+
+      cy.get('.todo-list li')
+        .each($el => {
+          cy.wrap($el)
+            .as('item')
+            .find('.toggle')
+            .click()
+
+          cy.wait('@update')
+
+          cy.get('@item')
+            .should('have.class', 'completed')
+        })
     })
   })
 })
